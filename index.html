@@ -18,23 +18,88 @@
             color: #333;
         }
 
-        header {
+        /* ENTÊTE */
+        .top-header {
             background: #b40000;
             color: white;
-            padding: 40px 20px;
-            text-align: center;
+            padding: 25px 20px;
+            border-bottom: 4px solid #8e0000;
         }
 
-        header h1 {
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header-left h1 {
             margin: 0;
-            font-size: 2.4rem;
+            font-size: 2rem;
         }
 
-        header p {
-            margin: 10px 0 0;
+        .header-left .title {
+            margin: 5px 0 0;
             font-size: 1.2rem;
+            opacity: 0.9;
         }
 
+        .header-right {
+            text-align: right;
+            font-size: 1rem;
+        }
+
+        .header-right p {
+            margin: 3px 0;
+        }
+
+        @media (max-width: 700px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-right {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+
+        /* MENU */
+        nav {
+            background: #ffffff;
+            border-bottom: 2px solid #ddd;
+        }
+
+        nav ul {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #b40000;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            background: #f2f2f2;
+        }
+
+        /* SECTIONS */
         section {
             max-width: 1000px;
             margin: 40px auto;
@@ -49,7 +114,7 @@
             margin-top: 0;
         }
 
-        /* Galerie */
+        /* GALERIE */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -79,7 +144,7 @@
             color: #b40000;
         }
 
-        /* Listings */
+        /* PROPRIÉTÉS */
         .listing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -104,6 +169,7 @@
             padding: 15px;
         }
 
+        /* FOOTER */
         footer {
             text-align: center;
             padding: 30px;
@@ -115,12 +181,33 @@
 
 <body>
 
-<header>
-    <h1>Sylvain Campeau</h1>
-    <p>Courtier Immobilier Résidentiel – Sutton Excellence</p>
+<!-- ENTÊTE -->
+<header class="top-header">
+    <div class="header-content">
+        <div class="header-left">
+            <h1>Sylvain Campeau</h1>
+            <p class="title">Courtier Immobilier Résidentiel</p>
+        </div>
+
+        <div class="header-right">
+            <p><strong>Email :</strong> SylvainCampeau@sutton.com</p>
+            <p><strong>Téléphone :</strong> (438) 868-8415</p>
+        </div>
+    </div>
 </header>
 
-<section>
+<!-- MENU -->
+<nav>
+    <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#proprietes">Propriétés</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ACCUEIL -->
+<section id="accueil">
     <h2>Une approche humaine et personnalisée</h2>
     <p>
         Acheter ou vendre une propriété, c’est un moment de vie important. On y retrouve des émotions, des attentes, parfois des inquiétudes. 
@@ -141,9 +228,10 @@
     </p>
 </section>
 
-<section class="gallery-section">
+<!-- GALERIE -->
+<section id="galerie">
     <h2>Espaces présentés</h2>
-    <p>Voici quelques exemples d’espaces soigneusement mis en valeur, reflétant la qualité et le souci du détail que j’offre à mes clients.</p>
+    <p>Voici quelques exemples d’espaces soigneusement mis en valeur.</p>
 
     <div class="gallery-grid">
 
@@ -151,7 +239,7 @@
             <img src="images/cuisine.jpg" alt="Cuisine moderne lumineuse">
             <div class="gallery-info">
                 <h3>Cuisine contemporaine</h3>
-                <p>Un espace lumineux, épuré et fonctionnel, idéal pour mettre en valeur les propriétés modernes.</p>
+                <p>Un espace lumineux, épuré et fonctionnel.</p>
             </div>
         </div>
 
@@ -159,7 +247,7 @@
             <img src="images/salle_manger.jpg" alt="Salle à manger chaleureuse">
             <div class="gallery-info">
                 <h3>Coin repas chaleureux</h3>
-                <p>Une ambiance douce et accueillante, parfaite pour illustrer les espaces de vie familiaux.</p>
+                <p>Une ambiance douce et accueillante.</p>
             </div>
         </div>
 
@@ -167,16 +255,17 @@
             <img src="images/chambre_bureau.jpg" alt="Chambre ou bureau minimaliste">
             <div class="gallery-info">
                 <h3>Chambre / espace bureau</h3>
-                <p>Un environnement calme et minimaliste, idéal pour les acheteurs recherchant confort et fonctionnalité.</p>
+                <p>Un environnement calme et minimaliste.</p>
             </div>
         </div>
 
     </div>
 </section>
 
-<section>
+<!-- PROPRIÉTÉS -->
+<section id="proprietes">
     <h2>Mes propriétés</h2>
-    <p>Voici une sélection de mes propriétés en vedette. Photos, vidéos et détails seront ajoutés régulièrement.</p>
+    <p>Voici une sélection de mes propriétés en vedette.</p>
 
     <div class="listing-grid">
 
@@ -184,7 +273,7 @@
             <img src="images/propriete1.jpg" alt="Propriété 1">
             <div class="info">
                 <h3>Adresse de la propriété</h3>
-                <p>Courte description de la maison, du secteur, etc.</p>
+                <p>Description de la maison, du secteur, etc.</p>
                 <p><strong>Prix :</strong> À venir</p>
             </div>
         </div>
@@ -199,6 +288,19 @@
         </div>
 
     </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="apropos">
+    <h2>À propos</h2>
+    <p>Section à compléter — je peux t’ajouter ta photo professionnelle, ton parcours, ta mission, ton approche.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email :</strong> SylvainCampeau@sutton.com</p>
+    <p><strong>Téléphone :</strong> (438) 868-8415</p>
 </section>
 
 <footer>
