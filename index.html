@@ -36,7 +36,7 @@
         }
 
         section {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             background: white;
             padding: 30px;
@@ -49,6 +49,37 @@
             margin-top: 0;
         }
 
+        /* Galerie */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .gallery-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .gallery-info {
+            padding: 15px;
+        }
+
+        .gallery-info h3 {
+            margin: 0 0 10px;
+            color: #b40000;
+        }
+
+        /* Listings */
         .listing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -110,13 +141,45 @@
     </p>
 </section>
 
+<section class="gallery-section">
+    <h2>Espaces présentés</h2>
+    <p>Voici quelques exemples d’espaces soigneusement mis en valeur, reflétant la qualité et le souci du détail que j’offre à mes clients.</p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-card">
+            <img src="images/cuisine.jpg" alt="Cuisine moderne lumineuse">
+            <div class="gallery-info">
+                <h3>Cuisine contemporaine</h3>
+                <p>Un espace lumineux, épuré et fonctionnel, idéal pour mettre en valeur les propriétés modernes.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="images/salle_manger.jpg" alt="Salle à manger chaleureuse">
+            <div class="gallery-info">
+                <h3>Coin repas chaleureux</h3>
+                <p>Une ambiance douce et accueillante, parfaite pour illustrer les espaces de vie familiaux.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="images/chambre_bureau.jpg" alt="Chambre ou bureau minimaliste">
+            <div class="gallery-info">
+                <h3>Chambre / espace bureau</h3>
+                <p>Un environnement calme et minimaliste, idéal pour les acheteurs recherchant confort et fonctionnalité.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <section>
     <h2>Mes propriétés</h2>
     <p>Voici une sélection de mes propriétés en vedette. Photos, vidéos et détails seront ajoutés régulièrement.</p>
 
     <div class="listing-grid">
 
-        <!-- Exemple de carte propriété -->
         <div class="card">
             <img src="images/propriete1.jpg" alt="Propriété 1">
             <div class="info">
@@ -135,7 +198,6 @@
             </div>
         </div>
 
-        <!-- Tu pourras dupliquer ces blocs autant que tu veux -->
     </div>
 </section>
 
