@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>PropriétésRosemère.com – Bienvenue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #23415a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .hero-text {
+      max-width: 420px;
+    }
+    .hero-text h2 {
+      margin-top: 0;
+      color: #23415a;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur PropriétésRosemère.com</h1>
+    <p>Votre portail immobilier pour Rosemère et les environs</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="ma-photo.png" alt="Intérieur moderne d’une propriété à Rosemère">
+      <div class="hero-text">
+        <h2>Des intérieurs lumineux et chaleureux</h2>
+        <p>
+          Découvrez une sélection de propriétés soigneusement choisies pour leur
+          confort, leur style et leur emplacement privilégié à Rosemère.
+        </p>
+        <p>
+          Que vous cherchiez une maison familiale, un condo moderne ou un
+          investissement immobilier, PropriétésRosemère.com vous accompagne
+          à chaque étape.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> PropriétésRosemère.com – Tous droits réservés
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
