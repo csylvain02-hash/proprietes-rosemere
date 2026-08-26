@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylvain Campeau – Courtier Immobilier Résidentiel Rosemère</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Courtier immobilier résidentiel à Rosemère offrant un service personnalisé, humain et centré sur l'expérience client. Sutton Excellence.">
+    <meta name="keywords" content="courtier immobilier Rosemère, Sutton Excellence, propriétés Rosemère, vente maison Rosemère, acheter, vendre">
+
+    <!-- Style -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f7f7f7;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* MENU DE NAVIGATION EN HAUT */
+        nav {
+            background: #ffffff;
+            border-bottom: 2px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #b40000;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            background: #f2f2f2;
+        }
+
+        /* ENTÊTE AVEC INFORMATIONS PERSONNELLES */
+        .top-header {
+            background: #b40000;
+            color: white;
+            padding: 25px 20px;
+            border-bottom: 4px solid #8e0000;
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header-left h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .header-left .title {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .header-photo img {
+            width: 140px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.15);
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 1rem;
+        }
+
+        .header-right p {
+            margin: 3px 0;
+        }
+
+        @media (max-width: 700px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-right {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+
+        /* BANNIÈRE HERO FULL-WIDTH DE ROSEMÈRE */
+        .hero-banner {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-text {
+            color: #ffffff;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .hero-text h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+            border: none;
+            padding: 0;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            margin: 0;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                height: 300px;
+            }
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+            .hero-text p {
+                font-size: 1rem;
+            }
+        }
+
+        /* SECTIONS GÉNÉRALES */
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #b40000;
+            margin-top: 0;
+            border-bottom: 2px solid #f2f2f2;
+            padding-bottom: 10px;
+        }
+
+        /* BOUTON SUTTON & LIEN EXTERNE */
+        .sutton-link-container {
+            text-align: center;
+            margin-top: 25px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px dashed #b40000;
+        }
+
+        .btn-sutton {
+            display: inline-block;
+            background: #b40000;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn-sutton:hover {
+            background: #8e0000;
+        }
+
+        /* PROPRIÉTÉS GRID */
+        .listing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .card a.property-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card .info {
+            padding: 15px;
+        }
+
+        .card .info h3 {
+            margin: 0 0 8px 0;
+            color: #b40000;
+            font-size: 1.1rem;
+        }
+
+        .card .info p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .card .info .btn-view {
+            display: inline-block;
+            margin-top: 10px;
+            color: #b40000;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* CARROUSEL / EXPÉRIENCES ET AVIS GOOGLE */
+        .reviews-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            background: #fdfdfd;
+            border-left: 4px solid #b40000;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .review-card {
+            display: none;
+        }
+
+        .review-card.active {
+            display: block;
+        }
+
+        .review-stars {
+            color: #f39c12;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .review-author {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #555;
+            text-align: right;
+        }
+
+        .slider-controls {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .slider-controls button {
+            background: #b40000;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .slider-controls button:hover {
+            background: #8e0000;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 1. MENU EN HAUT (STICKY) -->
+<nav>
+    <ul>
+        
+        <li><a href="#proprietes">Nos Propriétés</a></li>
+        <li><a href="#temoignages">Témoignages</a></li>
+                <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- 2. ENTÊTE AVEC INFORMATIONS PERSONNELLES -->
+<header class="top-header">
+    <div class="header-content">
+        <div class="header-left">
+            <h1>Sylvain Campeau</h1>
+            <p class="title">Courtier Immobilier Résidentiel – Sutton Excellence</p>
+        </div>
+
+        <div class="header-photo">
+            <img src="images/profile 2.jpg" alt="Sylvain Campeau – Courtier Immobilier">
+        </div>
+
+        <div class="header-right">
+            <p><strong>Courriel :</strong> SylvainCampeau@sutton.com</p>
+            <p><strong>Téléphone :</strong> (438) 868-8415</p>
+        </div>
+    </div>
+</header>
+
+<!-- 3. BANNIÈRE HERO : 1 SEULE GRANDE PHOTO ROSEMÈRE PLEINE LARGEUR -->
+<div class="hero-banner">
+    <img src="images/Accueil 3.png" alt="Vivre à Rosemère – Un cadre enchanteur">
+    <div class="hero-overlay">
+        <div class="hero-text">
+            <h2>Vivre à Rosemère</h2>
+            <p>Un cadre de vie d'exception au cœur de la rive-nord</p>
+        </div>
+    </div>
+</div>
+
+<!-- 4. SECTION MISSION -->
+<section id="mission">
+    <h2>La Mission</h2>
+    <p>
+        La mission consiste à offrir un accompagnement immobilier profondément humain et entièrement personnalisé. 
+        Chaque transaction représente un moment de vie important, souvent chargé d’émotions, d’attentes et parfois d’inquiétudes. 
+        La relation avec chaque client demeure au cœur du processus, en prenant le temps de comprendre sa réalité, ses besoins et ses priorités. 
+        L’objectif est de guider avec respect, écoute et authenticité, afin de rendre chaque étape simple, claire et rassurante.
+    </p>
+</section>
+
+<!-- 5. MES PROPRIÉTÉS (+ LIENS CLIQUABLES) -->
+<section id="proprietes">
+    <h2>Mes Propriétés</h2>
+    <p>Découvrez une sélection de mes propriétés en vedette (cliquez sur une fiche pour ouvrir la fiche Sutton) :</p>
+
+    <div class="listing-grid">
+        <!-- Propriété 1 : 507, rue Gaston-Mongeau (Sainte-Thérèse) -->
+        <div class="card">
+            <a href="https://www.suttonquebec.com/fr/inscription/maison-a-etages-a-vendre-507-rue-gaston-mongeau-sainte-therese.html?noInscription=16434778&typeInscription=1" target="_blank" rel="noopener noreferrer" class="property-link">
+                <img src="images/507 Gaston Mongeau.jpg" alt="507, rue Gaston-Mongeau, Sainte-Thérèse">
+                <div class="info">
+                    <h3>507, rue Gaston-Mongeau</h3>
+                    <p>Sainte-Thérèse</p>
+                    <p>Superbe maison à étages, alliant modernité et confort haut de gamme. Trois chambres à l'étage,cuisine rénovée avec îlot. À l'extérieur, profitez d'une grande véranda trois saisons, d'une cour intime avec piscine creusée chauffée, spa et gazon synthétique pour un maximum de luxe et un minimum d'entretien. </p>
+<p><strong>Prix :</strong> 1 149 000$</p>
+                    <span class="btn-view">Voir la fiche complète sur Sutton ➔</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Propriété 2 : 1200, boul. de Maisonneuve O. (Montréal / Ville-Marie) -->
+        <div class="card">
+            <a href="https://www.suttonquebec.com/fr/inscription/appartement-a-vendre-1200-boul-de-maisonneuve-o-app-11-e-montreal-ville-marie.html?noInscription=11528629&typeInscription=1" target="_blank" rel="noopener noreferrer" class="property-link">
+                <img src="images/1200 maisonneuve.jpg" alt="1200, boul. de Maisonneuve O., App. 11-E, Montréal">
+                <div class="info">
+                    <h3>1200, boul. de Maisonneuve O., App. 11-E</h3>
+                    <p>Montréal (Ville-Marie)</p>
+                    <p>Au 11e étage, au coeur du Mille Carré Doré. Cette unité de 1 274 pi² allie élégance et confort.Pour un style de vie urbain raffiné et sans compromis. Une opportunité rare dans un secteur hautement recherché !                                                                                                                                                                                                                                  </p>        <p><strong>Prix :</strong> 899 000$</p>
+
+                    <span class="btn-view">Voir la fiche complète sur Sutton ➔</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    
+</section>
+
+
+<!-- 6. VOS EXPÉRIENCES (AVIS GOOGLE BUSINESS DÉROULANTS) -->
+<section id="temoignages">
+    <h2>Vos Expériences</h2>
+    <p>Découvrez ce que mes clients disent sur Google Business :</p>
+
+    <div class="reviews-slider">
+        <div class="review-card active">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Excellente expérience avec Sylvain Campagne ! Professionnel, disponible et à l’écoute, il nous a accompagnés avec rigueur et transparence à chaque étape. Sa grande connaissance du marché, son efficacité et son approche humaine font toute la différence. Nous nous sommes sentis en confiance du début à la fin. Nous le recommandons sans hésitation chez ANEB"</p>
+            <div class="review-author">- Josée</div>
+        </div>
+
+       
+        <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Sylvain m’a accompagné lors de 2 transactions. Il a démontré un professionnalisme exemplaire, de l’honnêteté, de la rigueur et de la patience. Ce fut une expérience rassurante et agréable du début à la fin. N’hésitez pas à le contacter!"</p>
+            <div class="review-author">- Isabelle </div>
+        </div>
+<div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"My experience was amazing. A man with alot of compassion but listens closely to my needs and wants in regards to sell and buying of a home. Very knowledgeable, Sylvain help me avoid scams and poor choices of homes. Very patient and understanding of my stress level .Sylvain found me a gem in the exacte area I wanted and did many extras that agents often don t provide. I am in love with my home thanks to Sylvain. At the same time bilingual so he can meet many needs. And Sylvain s great sense of humour helped me relax and laugh when i was very overwhelmed.Reliable , friendly and caring, you are in a win- win situation with Sylvain"</p>
+            <div class="review-author">- Lesley </div>
+        </div>
+<div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Merci Sylvain! Grâce à toi, on a trouvé la bonne maison!
+"</p>
+            <div class="review-author">- Sarah et André Phillipe </div>
+        </div>
+<div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Très belle expérience avec Sylvain ! Toujours disponible, à l’écoute et vraiment impliqué dans chaque étape. Je me suis senti en confiance du début à la fin! Un grand merci pour le professionnalisme et le soutien! je recommande sans hésitation !
+"</p>
+            <div class="review-author">- Gabrielle </div>
+        </div>
+
+
+        <div class="slider-controls">
+            <button onclick="changeReview(-1)">❮ Précédent</button>
+            <button onclick="changeReview(1)">Suivant ❯</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Courriel :</strong> SylvainCampeau@sutton.com</p>
+    <p><strong>Téléphone :</strong> (438) 868-8415</p>
+</section>
+
+<footer>
+    © 2026 Sylvain Campeau – Sutton Excellence
+</footer>
+
+<!-- SCRIPT POUR LE DÉROULEMENT DES AVIS GOOGLE -->
+<script>
+    let currentReview = 0;
+    const reviews = document.querySelectorAll('.review-card');
+
+    function showReview(index) {
+        reviews.forEach(review => review.classList.remove('active'));
+        if (index >= reviews.length) currentReview = 0;
+        if (index < 0) currentReview = reviews.length - 1;
+        reviews[currentReview].classList.add('active');
+    }
+
+    function changeReview(direction) {
+        currentReview += direction;
+        showReview(currentReview);
+    }
+</script>
+
+</body>
+</html>
