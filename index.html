@@ -160,8 +160,11 @@
 
         .hero-text {
             color: #ffffff;
-            padding: 20px;
+            padding: 20px 30px;
             max-width: 800px;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 8px;
+            backdrop-filter: blur(2px);
         }
 
         .hero-text h2 {
@@ -211,7 +214,7 @@
         /* PROPRIÉTÉS GRID */
         .listing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
@@ -285,10 +288,12 @@
 
         .property-video video {
             width: 100%;
-            height: auto;
+            max-height: 250px;
+            object-fit: cover;
             border-radius: 6px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             display: block;
+            background-color: #000;
         }
 
         /* CARROUSEL / EXPÉRIENCES ET AVIS GOOGLE */
@@ -341,6 +346,17 @@
 
         .slider-controls button:hover {
             background: #8e0000;
+        }
+
+        /* SECTION CONTACT */
+        .contact-info a {
+            color: #b40000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
         /* FOOTER */
@@ -480,10 +496,10 @@
     </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="contact-info">
     <h2>Contact</h2>
-    <p><strong>Courriel :</strong> SylvainCampeau@sutton.com</p>
-    <p><strong>Téléphone :</strong> (438) 868-8415</p>
+    <p><strong>Courriel :</strong> <a href="mailto:SylvainCampeau@sutton.com">SylvainCampeau@sutton.com</a></p>
+    <p><strong>Téléphone :</strong> <a href="tel:+14388688415">(438) 868-8415</a></p>
 </section>
 
 <footer>
