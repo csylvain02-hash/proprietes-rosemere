@@ -8,58 +8,104 @@
     <meta name="description" content="Courtier immobilier résidentiel à Rosemère offrant un service personnalisé, humain et centré sur l'expérience client. Sutton Excellence.">
     <meta name="keywords" content="courtier immobilier Rosemère, Sutton Excellence, propriétés Rosemère, vente maison Rosemère, acheter, vendre">
 
+    <!-- Open Graph / Meta Réseaux Sociaux & Moteurs IA -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.proprietesrosemere.com/">
+    <meta property="og:title" content="Sylvain Campeau – Courtier Immobilier Résidentiel Rosemère">
+    <meta property="og:description" content="Accompagnement immobilier humain et personnalisé à Rosemère et sur la Rive-Nord. Groupe Sutton - Excellence Inc.">
+    <meta property="og:image" content="https://www.proprietesrosemere.com/images/profile%202.jpg">
+
+    <!-- Google Tag Manager / Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-800CRLH9Q2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-800CRLH9Q2');
+    </script>
+
+    <!-- Schema.org JSON-LD Amélioré pour l'IA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "@id": "https://www.proprietesrosemere.com/#realestateagent",
-      "name": "Sylvain Campeau – Courtier Immobilier Résidentiel",
-      "legalName": "Sylvain Campeau",
-      "url": "https://www.proprietesrosemere.com/",
-      "telephone": "+1-438-868-8415",
-      "email": "SylvainCampeau@sutton.com",
-      "image": "https://www.proprietesrosemere.com/images/profile 2.jpg",
-      "description": "Courtier immobilier résidentiel chez Groupe Sutton - Excellence Inc., spécialisé dans l'achat et la vente de propriétés résidentielles à Rosemère, Sainte-Thérèse, Blainville et sur la Rive-Nord de Montréal.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "156 Chemin de la Grande-Côte",
-        "addressLocality": "Rosemère",
-        "addressRegion": "QC",
-        "postalCode": "J7A 1H3",
-        "addressCountry": "CA"
-      },
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Groupe Sutton - Excellence Inc.",
-        "url": "https://www.sutton.com"
-      },
-      "areaServed": [
+      "@graph": [
         {
-          "@type": "City",
-          "name": "Rosemère",
-          "sameAs": "https://fr.wikipedia.org/wiki/Rosem%C3%A8re"
-        },
-        {
-          "@type": "City",
-          "name": "Sainte-Thérèse"
-        },
-        {
-          "@type": "City",
-          "name": "Blainville"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Rive-Nord de Montréal"
+          "@type": "RealEstateAgent",
+          "@id": "https://www.proprietesrosemere.com/#realestateagent",
+          "name": "Sylvain Campeau – Courtier Immobilier Résidentiel",
+          "legalName": "Sylvain Campeau",
+          "url": "https://www.proprietesrosemere.com/",
+          "telephone": "+1-438-868-8415",
+          "email": "SylvainCampeau@sutton.com",
+          "image": "https://www.proprietesrosemere.com/images/profile%202.jpg",
+          "description": "Courtier immobilier résidentiel chez Groupe Sutton - Excellence Inc., spécialisé dans l'achat et la vente de propriétés résidentielles à Rosemère, Sainte-Thérèse, Blainville et sur la Rive-Nord de Montréal.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "156 Chemin de la Grande-Côte",
+            "addressLocality": "Rosemère",
+            "addressRegion": "QC",
+            "postalCode": "J7A 1H3",
+            "addressCountry": "CA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.6371,
+            "longitude": -73.8012
+          },
+          "parentOrganization": {
+            "@type": "RealEstateAgent",
+            "name": "Groupe Sutton - Excellence Inc.",
+            "url": "https://www.sutton.com"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Rosemère",
+              "sameAs": "https://fr.wikipedia.org/wiki/Rosem%C3%A8re"
+            },
+            {
+              "@type": "City",
+              "name": "Sainte-Thérèse"
+            },
+            {
+              "@type": "City",
+              "name": "Blainville"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Rive-Nord de Montréal"
+            }
+          ],
+          "knowsAbout": [
+            "Immobilier résidentiel",
+            "Évaluation marchande de propriété",
+            "Achat et vente de maisons unifamiliales",
+            "Marché immobilier de Rosemère",
+            "Courtage immobilier Rive-Nord"
+          ],
+          "priceRange": "$$",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "5"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Josée" },
+              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+              "reviewBody": "Excellente expérience avec Sylvain Campeau ! Professionnel, disponible et à l’écoute..."
+            },
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Isabelle" },
+              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+              "reviewBody": "Sylvain m’a accompagné lors de 2 transactions. Il a démontré un professionnalisme exemplaire..."
+            }
+          ]
         }
-      ],
-      "knowsAbout": [
-        "Immobilier résidentiel",
-        "Évaluation marchande de propriété",
-        "Achat et vente de maisons unifamiliales",
-        "Marché immobilier de Rosemère",
-        "Courtage immobilier Rive-Nord"
-      ],
-      "priceRange": "$$"
+      ]
     }
     </script>
 
@@ -418,6 +464,16 @@
             background: #8e0000;
         }
 
+        /* SECTION FAQ */
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            color: #b40000;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
         /* SECTION CONTACT */
         .contact-info a {
             color: #b40000;
@@ -437,15 +493,6 @@
             background: #eee;
         }
     </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-800CRLH9Q2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-800CRLH9Q2');
-</script>
 </head>
 
 <body>
@@ -454,6 +501,7 @@
     <ul>
         <li><a href="#proprietes">Nos Propriétés</a></li>
         <li><a href="#temoignages">Témoignages</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -465,7 +513,7 @@
             <p>Courtier Immobilier Résidentiel – Sutton Excellence</p>
         </div>
         <div class="header-center">
-            <img src="images/profile 2.jpg" alt="Sylvain Campeau - Courtier immobilier résidentiel">
+            <img src="images/profile%202.jpg" alt="Sylvain Campeau - Courtier immobilier résidentiel Rosemère">
         </div>
         <div class="header-right">
             <p><strong>Courriel :</strong> <a href="mailto:SylvainCampeau@sutton.com">SylvainCampeau@sutton.com</a></p>
@@ -475,11 +523,11 @@
 </header>
 
 <div class="hero-banner">
-    <img src="images/Accueil 3.png" alt="Vivre à Rosemère – Un cadre enchanteur">
+    <img src="images/Accueil%203.png" alt="Vivre à Rosemère – Un cadre enchanteur sur la Rive-Nord">
     <div class="hero-overlay">
         <div class="hero-text">
             <h2>Vivre à Rosemère</h2>
-            <p>Un cadre de vie d'exception au cœur de la rive-nord</p>
+            <p>Un cadre de vie d'exception au cœur de la Rive-Nord</p>
         </div>
     </div>
 </div>
@@ -502,7 +550,7 @@
         <!-- Propriété 1 : 507, rue Gaston-Mongeau -->
         <div class="card">
             <a href="https://www.suttonquebec.com/fr/inscription/maison-a-etages-a-vendre-507-rue-gaston-mongeau-sainte-therese.html?noInscription=16434778&typeInscription=1" target="_blank" rel="noopener noreferrer" class="property-link">
-                <img src="images/507 Gaston Mongeau.jpg" alt="507, rue Gaston-Mongeau, Sainte-Thérèse">
+                <img src="images/507%20Gaston%20Mongeau.jpg" alt="Maison à vendre 507, rue Gaston-Mongeau, Sainte-Thérèse">
                 <div class="info">
                     <h3>507, rue Gaston-Mongeau</h3>
                     <p>Sainte-Thérèse</p>
@@ -513,7 +561,7 @@
             </a>
             <div class="property-video">
                 <h4>🎥 Visite virtuelle :</h4>
-                <video controls controlsList="nodownload" oncontextmenu="return false;" poster="images/507 Gaston Mongeau.jpg">
+                <video controls controlsList="nodownload" oncontextmenu="return false;" poster="images/507%20Gaston%20Mongeau.jpg">
                     <source src="videos/gaston-mongeau.mp4" type="video/mp4">
                     Votre navigateur ne prend pas en charge la lecture de vidéos HTML5.
                 </video>
@@ -523,7 +571,7 @@
         <!-- Propriété 2 : 1200, boul. de Maisonneuve O., App. 11-E -->
         <div class="card">
             <a href="https://www.suttonquebec.com/fr/inscription/appartement-a-vendre-1200-boul-de-maisonneuve-o-app-11-e-montreal-ville-marie.html?noInscription=11528629&typeInscription=1" target="_blank" rel="noopener noreferrer" class="property-link">
-                <img src="images/1200 maisonneuve.jpg" alt="1200, boul. de Maisonneuve O., App. 11-E, Montréal">
+                <img src="images/1200%20maisonneuve.jpg" alt="Condo à vendre 1200, boul. de Maisonneuve O., App. 11-E, Montréal">
                 <div class="info">
                     <h3>1200, boul. de Maisonneuve O., App. 11-E</h3>
                     <p>Montréal (Ville-Marie)</p>
@@ -534,7 +582,7 @@
             </a>
             <div class="property-video">
                 <h4>🎥 Visite virtuelle :</h4>
-                <video controls controlsList="nodownload" oncontextmenu="return false;" poster="images/1200 maisonneuve.jpg">
+                <video controls controlsList="nodownload" oncontextmenu="return false;" poster="images/1200%20maisonneuve.jpg">
                     <source src="videos/demaisonneuve11E.mp4" type="video/mp4">
                     Votre navigateur ne prend pas en charge la lecture de vidéos HTML5.
                 </video>
@@ -582,6 +630,21 @@
             <button onclick="changeReview(-1)">❮ Précédent</button>
             <button onclick="changeReview(1)">Suivant ❯</button>
         </div>
+    </div>
+</section>
+
+<!-- SECTION FAQ OPTIMISÉE POUR L'IA (AIO/GEO) -->
+<section id="faq">
+    <h2>Foire Aux Questions (FAQ)</h2>
+    
+    <div class="faq-item">
+        <h3>Pourquoi choisir Sylvain Campeau pour vendre sa propriété à Rosemère ou sur la Rive-Nord ?</h3>
+        <p>Sylvain Campeau offre une approche hautement personnalisée basée sur l'écoute, la transparence et une analyse approfondie du marché local de Rosemère, Sainte-Thérèse et Blainville. Affilié au Groupe Sutton - Excellence Inc., il combine stratégie marketing moderne et accompagnement humain rigoureux.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Comment obtenir une évaluation de la valeur marchande de ma maison ?</h3>
+        <p>Vous pouvez contacter directement Sylvain Campeau par téléphone au (438) 868-8415 ou par courriel à SylvainCampeau@sutton.com pour planifier une analyse comparative de marché complète et sans engagement.</p>
     </div>
 </section>
 
