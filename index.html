@@ -28,155 +28,160 @@
       gtag('config', 'G-800CRLH9Q2');
     </script>
 
-    <!-- Schema.org JSON-LD Améliorée avec les Offres Immobilières (Offer / RealEstateListing) -->
-    <script type="application/ld+json">
+    <!-- Schema.org JSON-LD Amélioré (RealEstateAgent + sameAs + FAQPage) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "RealEstateAgent",
+      "@id": "https://www.proprietesrosemere.com/#realestateagent",
+      "name": "Sylvain Campeau – Courtier Immobilier Résidentiel",
+      "legalName": "Sylvain Campeau",
+      "url": "https://www.proprietesrosemere.com/",
+      "telephone": "+1-438-868-8415",
+      "email": "SylvainCampeau@sutton.com",
+      "image": "https://www.proprietesrosemere.com/images/profile%202.jpg",
+      "description": "Courtier immobilier résidentiel chez Groupe Sutton - Excellence Inc., spécialisé dans l'achat et la vente de propriétés résidentielles à Rosemère, Sainte-Thérèse, Blainville et sur la Rive-Nord de Montréal.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "156 Chemin de la Grande-Côte",
+        "addressLocality": "Rosemère",
+        "addressRegion": "QC",
+        "postalCode": "J7A 1H3",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.6371,
+        "longitude": -73.8012
+      },
+      "parentOrganization": {
+        "@type": "RealEstateAgent",
+        "name": "Groupe Sutton - Excellence Inc.",
+        "url": "https://www.sutton.com"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61558709003904",
+        "https://www.instagram.com/csylvain02/",
+        "https://www.linkedin.com/in/sylvain-campeau-52bb402"
+      ],
+      "areaServed": [
         {
-          "@type": "RealEstateAgent",
-          "@id": "https://www.proprietesrosemere.com/#realestateagent",
-          "name": "Sylvain Campeau – Courtier Immobilier Résidentiel",
-          "legalName": "Sylvain Campeau",
-          "url": "https://www.proprietesrosemere.com/",
-          "telephone": "+1-438-868-8415",
-          "email": "SylvainCampeau@sutton.com",
-          "image": "https://www.proprietesrosemere.com/images/profile%202.jpg",
-          "description": "Courtier immobilier résidentiel chez Groupe Sutton - Excellence Inc., spécialisé dans l'achat et la vente de propriétés résidentielles à Rosemère, Sainte-Thérèse, Blainville et sur la Rive-Nord de Montréal.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "156 Chemin de la Grande-Côte",
-            "addressLocality": "Rosemère",
-            "addressRegion": "QC",
-            "postalCode": "J7A 1H3",
-            "addressCountry": "CA"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 45.6371,
-            "longitude": -73.8012
-          },
-          "parentOrganization": {
-            "@type": "RealEstateAgent",
-            "name": "Groupe Sutton - Excellence Inc.",
-            "url": "https://www.sutton.com"
-          },
-          "areaServed": [
-            {
-              "@type": "City",
-              "name": "Rosemère",
-              "sameAs": "https://fr.wikipedia.org/wiki/Rosem%C3%A8re"
-            },
-            {
-              "@type": "City",
-              "name": "Sainte-Thérèse"
-            },
-            {
-              "@type": "City",
-              "name": "Blainville"
-            },
-            {
-              "@type": "AdministrativeArea",
-              "name": "Rive-Nord de Montréal"
-            }
-          ],
-          "knowsAbout": [
-            "Immobilier résidentiel",
-            "Évaluation marchande de propriété",
-            "Achat et vente de maisons unifamiliales",
-            "Marché immobilier de Rosemère",
-            "Courtage immobilier Rive-Nord"
-          ],
-          "priceRange": "$$",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "5"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Josée" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-              "reviewBody": "Excellente expérience avec Sylvain Campeau ! Professionnel, disponible et à l’écoute..."
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Isabelle" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-              "reviewBody": "Sylvain m’a accompagné lors de 2 transactions. Il a démontré un professionnalisme exemplaire..."
-            }
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Propriétés en vedette",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "SingleFamilyResidence",
-                  "name": "Maison à étages - 507, rue Gaston-Mongeau",
-                  "description": "Superbe maison à étages, alliant modernité et confort haut de gamme. Trois chambres à l'étage, cuisine rénovée avec îlot, véranda 3 saisons, cour intime avec piscine creusée chauffée et spa.",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "507, rue Gaston-Mongeau",
-                    "addressLocality": "Sainte-Thérèse",
-                    "addressRegion": "QC",
-                    "addressCountry": "CA"
-                  },
-                  "image": "https://www.proprietesrosemere.com/images/507%20Gaston%20Mongeau.jpg"
-                },
-                "price": "1149000",
-                "priceCurrency": "CAD",
-                "url": "https://www.suttonquebec.com/fr/inscription/maison-a-etages-a-vendre-507-rue-gaston-mongeau-sainte-therese.html?noInscription=16434778&typeInscription=1"
+          "@type": "City",
+          "name": "Rosemère",
+          "sameAs": "https://fr.wikipedia.org/wiki/Rosem%C3%A8re"
+        },
+        {
+          "@type": "City",
+          "name": "Sainte-Thérèse"
+        },
+        {
+          "@type": "City",
+          "name": "Blainville"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Rive-Nord de Montréal"
+        }
+      ],
+      "knowsAbout": [
+        "Immobilier résidentiel",
+        "Évaluation marchande de propriété",
+        "Achat et vente de maisons unifamiliales",
+        "Marché immobilier de Rosemère",
+        "Courtage immobilier Rive-Nord"
+      ],
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Josée" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "Excellente expérience avec Sylvain Campeau ! Professionnel, disponible et à l’écoute..."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Isabelle" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "Sylvain m’a accompagné lors de 2 transactions. Il a démontré un professionnalisme exemplaire..."
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Propriétés en vedette",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SingleFamilyResidence",
+              "name": "Maison à étages - 507, rue Gaston-Mongeau",
+              "description": "Superbe maison à étages, alliant modernité et confort haut de gamme. Trois chambres à l'étage, cuisine rénovée avec îlot, véranda 3 saisons, cour intime avec piscine creusée chauffée et spa.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "507, rue Gaston-Mongeau",
+                "addressLocality": "Sainte-Thérèse",
+                "addressRegion": "QC",
+                "addressCountry": "CA"
               },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Apartment",
-                  "name": "Condo - 1200, boul. de Maisonneuve O., App. 11-E",
-                  "description": "Au 11e étage, au cœur du Mille Carré Doré. Cette unité de 1 274 pi² allie élégance et confort pour un style de vie urbain raffiné.",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "1200, boul. de Maisonneuve O., App. 11-E",
-                    "addressLocality": "Montréal",
-                    "addressRegion": "QC",
-                    "addressCountry": "CA"
-                  },
-                  "image": "https://www.proprietesrosemere.com/images/1200%20maisonneuve.jpg"
-                },
-                "price": "899000",
-                "priceCurrency": "CAD",
-                "url": "https://www.suttonquebec.com/fr/inscription/appartement-a-vendre-1200-boul-de-maisonneuve-o-app-11-e-montreal-ville-marie.html?noInscription=11528629&typeInscription=1"
-              }
-            ]
+              "image": "https://www.proprietesrosemere.com/images/507%20Gaston%20Mongeau.jpg"
+            },
+            "price": "1149000",
+            "priceCurrency": "CAD",
+            "url": "https://www.suttonquebec.com/fr/inscription/maison-a-etages-a-vendre-507-rue-gaston-mongeau-sainte-therese.html?noInscription=16434778&typeInscription=1"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Apartment",
+              "name": "Condo - 1200, boul. de Maisonneuve O., App. 11-E",
+              "description": "Au 11e étage, au cœur du Mille Carré Doré. Cette unité de 1 274 pi² allie élégance et confort pour un style de vie urbain raffiné.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1200, boul. de Maisonneuve O., App. 11-E",
+                "addressLocality": "Montréal",
+                "addressRegion": "QC",
+                "addressCountry": "CA"
+              },
+              "image": "https://www.proprietesrosemere.com/images/1200%20maisonneuve.jpg"
+            },
+            "price": "899000",
+            "priceCurrency": "CAD",
+            "url": "https://www.suttonquebec.com/fr/inscription/appartement-a-vendre-1200-boul-de-maisonneuve-o-app-11-e-montreal-ville-marie.html?noInscription=11528629&typeInscription=1"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.proprietesrosemere.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pourquoi choisir Sylvain Campeau pour vendre sa propriété à Rosemère ou sur la Rive-Nord ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sylvain Campeau offre une approche hautement personnalisée basée sur l'écoute, la transparence et une analyse approfondie du marché local de Rosemère, Sainte-Thérèse et Blainville. Affilié au Groupe Sutton - Excellence Inc., il combine stratégie marketing moderne et accompagnement humain rigoureux."
           }
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://www.proprietesrosemere.com/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Pourquoi choisir Sylvain Campeau pour vendre sa propriété à Rosemère ou sur la Rive-Nord ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sylvain Campeau offre une approche hautement personnalisée basée sur l'écoute, la transparence et une analyse approfondie du marché local de Rosemère, Sainte-Thérèse et Blainville. Affilié au Groupe Sutton - Excellence Inc., il combine stratégie marketing moderne et accompagnement humain rigoureux."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Comment obtenir une évaluation de la valeur marchande de ma maison ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Vous pouvez contacter directement Sylvain Campeau par téléphone au (438) 868-8415 ou par courriel à SylvainCampeau@sutton.com pour planifier une analyse comparative de marché complète et sans engagement."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Comment obtenir une évaluation de la valeur marchande de ma maison ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous pouvez contacter directement Sylvain Campeau par téléphone au (438) 868-8415 ou par courriel à SylvainCampeau@sutton.com pour planifier une analyse comparative de marché complète et sans engagement."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     
     <style>
         body {
