@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de Renseignements à la Copropriété (DRCOP) – Sylvain Campeau</title>
+    <link rel="icon" type="image/jpg" href="images/profile%202.jpg">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f7f7f7;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .top-header {
+            background: #b40000;
+            color: #ffffff;
+            padding: 30px 20px;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-left h1 {
+            font-size: 2.2rem;
+            margin: 0 0 8px 0;
+            color: #ffffff;
+        }
+
+        .header-left p {
+            font-size: 1.1rem;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .header-right p {
+            margin: 4px 0;
+            color: #ffffff;
+        }
+
+        .header-right a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 850px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        main {
+            max-width: 950px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #b40000;
+            margin-top: 0;
+            border-bottom: 2px solid #f2f2f2;
+            padding-bottom: 10px;
+        }
+
+        .section-header {
+            background: #1a4f7c;
+            color: #ffffff;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+
+        .question-block {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 18px;
+            margin-bottom: 18px;
+        }
+
+        .q-title {
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+            font-size: 0.98rem;
+        }
+
+        .sub-field {
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 3px solid #b40000;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 0.95rem;
+        }
+
+        textarea {
+            height: 75px;
+            resize: vertical;
+        }
+
+        .radio-options {
+            display: inline-flex;
+            gap: 20px;
+            margin-left: 10px;
+        }
+
+        .radio-options label {
+            cursor: pointer;
+            font-weight: normal;
+        }
+
+        .btn-submit {
+            background: #b40000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 25px;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #8e0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-header">
+    <div class="header-content">
+        <div class="header-left">
+            <h1>Sylvain Campeau</h1>
+            <p>Courtier Immobilier Résidentiel – Sutton Excellence</p>
+        </div>
+        <div class="header-right">
+            <p><strong>Courriel :</strong> <a href="mailto:sylvaincampeau@sutton.com">sylvaincampeau@sutton.com</a></p>
+            <p><strong>Téléphone :</strong> <a href="tel:+14388688415">(438) 868-8415</a></p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <h2>Demande de Renseignements à la Copropriété (DRCOP)</h2>
+    <div class="section-header">3. RENSEIGNEMENTS À FOURNIR</div>
+
+    <form id="formDRCOP">
+
+        <!-- Identification de la fraction -->
+        <div class="question-block" style="background: #f4f7f9;">
+            <div class="q-title">IDENTIFICATION DE LA PROPRIÉTÉ</div>
+            <div class="grid-2">
+                <div>
+                    <label><strong>Adresse de la propriété :</strong></label>
+                    <input type="text" id="adresse_propriete" name="adresse_propriete" placeholder="Ex: 1738 Rue des Souverains, Terrebonne" required>
+                </div>
+                <div>
+                    <label><strong>N° d'unité / app. :</strong></label>
+                    <input type="text" id="unite_numero" name="unite_numero" placeholder="Ex: App. 102" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.1 -->
+        <div class="question-block">
+            <div class="q-title">3.1 Quel est le montant des charges communes mensuelles afférentes à chacune des fractions vendues ?</div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <input type="number" step="0.01" name="q3_1_charges_mensuelles" placeholder="0.00" style="max-width: 250px;" required> <strong>$</strong>
+            </div>
+        </div>
+
+        <!-- 3.2 -->
+        <div class="question-block">
+            <div class="q-title">3.2 Quelle est la date à laquelle les dernières charges communes ont été payées et quelle est la période couverte par ce paiement ?</div>
+            <div class="grid-2">
+                <div>
+                    <label><strong>DATE :</strong></label>
+                    <input type="date" name="q3_2_date_paiement" required>
+                </div>
+                <div>
+                    <label><strong>PÉRIODE COUVERTE :</strong></label>
+                    <input type="text" name="q3_2_periode_couverte" placeholder="Ex: Mois d'octobre 2026" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.3 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.3 Existe-t-il des arrérages de charges mensuelles affectant la ou les fractions qui font l'objet de la vente ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_3_arrerages" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_3_arrerages" value="Oui"> oui</label>
+                </div>
+            </div>
+            <div class="sub-field">
+                <p>Si oui, quel est le montant de ces arrérages ?</p>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                    <input type="number" step="0.01" name="q3_3_arrerages_montant" placeholder="0.00" style="max-width: 250px;"> <strong>$</strong>
+                </div>
+                <p>
+                    Si oui, ces arrérages portent-ils intérêt ?
+                    <span class="radio-options">
+                        <label><input type="radio" name="q3_3_arrerages_interet" value="Non"> non</label>
+                        <label><input type="radio" name="q3_3_arrerages_interet" value="Oui"> oui</label>
+                    </span>
+                </p>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label>Si oui, à quel taux ?</label>
+                    <input type="number" step="0.01" name="q3_3_arrerages_taux" placeholder="0.0" style="max-width: 120px;"> <strong>%</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.4 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.4 Existe-t-il des cotisations qui ont été votées et qui ne sont pas encore exigibles ou de telles cotisations sont-elles à prévoir ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_4_cotisations" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_4_cotisations" value="Oui"> oui</label>
+                </div>
+            </div>
+            <div class="sub-field">
+                <p>Si oui, quel est le montant de ces cotisations ?</p>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                    <input type="number" step="0.01" name="q3_4_cotisations_montant" placeholder="0.00" style="max-width: 250px;"> <strong>$</strong>
+                </div>
+                <div class="grid-2">
+                    <div>
+                        <label>Si oui, quelle est leur date d'exigibilité ? 📅</label>
+                        <input type="date" name="q3_4_cotisations_date">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.5 -->
+        <div class="question-block">
+            <div class="q-title">3.5 Quel est le montant accumulé dans le fonds de prévoyance ?</div>
+            <div class="grid-2">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <input type="number" step="0.01" name="q3_5_fonds_prevoyance_montant" placeholder="0.00" required> <strong>$</strong>
+                </div>
+                <div>
+                    <label><strong>en date du 📅 :</strong></label>
+                    <input type="date" name="q3_5_fonds_prevoyance_date" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.6 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.6 L'exercice en cours laisse-t-il prévoir un déficit d'opération pour l'année financière courante ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_6_deficit" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_6_deficit" value="Oui"> oui</label>
+                </div>
+            </div>
+            <div class="sub-field">
+                <label>Si oui, fournir les explications :</label>
+                <textarea name="q3_6_deficit_explications"></textarea>
+            </div>
+        </div>
+
+        <!-- 3.7 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.7 Un surplus pour la même période est-il prévu ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_7_surplus" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_7_surplus" value="Oui"> oui</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.8 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.8 Le syndicat a-t-il connaissance d'une procédure judiciaire, de médiation ou d'arbitrage actuellement pendante, ou d'une mise en demeure, contre le syndicat, ou par lui contre un tiers ou un copropriétaire ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_8_procedure" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_8_procedure" value="Oui"> oui</label>
+                </div>
+            </div>
+            <div class="sub-field">
+                <label>Si oui, fournir les explications :</label>
+                <textarea name="q3_8_procedure_explications"></textarea>
+            </div>
+        </div>
+
+        <!-- 3.9 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.9 Un jugement a-t-il été rendu contre le syndicat qui serait en attente d'exécution ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_9_jugement" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_9_jugement" value="Oui"> oui</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.10 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.10 Le syndicat a-t-il été dûment immatriculé ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_10_immatricule" value="Non"> non</label>
+                    <label><input type="radio" name="q3_10_immatricule" value="Oui" checked> oui</label>
+                </div>
+            </div>
+            <div class="sub-field">
+                <label>Si oui, indiquez le n° d'entreprise du Québec (NEQ) :</label>
+                <input type="text" name="q3_10_neq" placeholder="10 chiffres ex: 1160000000" style="max-width: 350px;">
+            </div>
+        </div>
+
+        <!-- 3.11 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.11 Existe-t-il une police d'assurance contre les risques usuels contractée par le syndicat ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_11_assurance" value="Non"> non</label>
+                    <label><input type="radio" name="q3_11_assurance" value="Oui" checked> oui</label>
+                </div>
+            </div>
+            <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0 0;">Le cas échéant, fournir une copie de la police d'assurance.</p>
+        </div>
+
+        <!-- 3.12 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.12 Existe-t-il des indemnités d'assurance payables à la ou aux fractions qui font l'objet de la vente ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_12_indemnites" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_12_indemnites" value="Oui"> oui</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.13 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.13 Le propriétaire de la fraction résidentielle qui fait l'objet de la vente doit-il payer à la copropriété des frais additionnels pour une partie commune dont il a l'usage exclusif ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_13_frais_additionnels" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_13_frais_additionnels" value="Oui"> oui</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.14 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.14 Le syndicat a-t-il transmis un avis ou est-il sur le point de transmettre au vendeur un avis de contravention à la déclaration de copropriété qui pourrait avoir des répercussions pour l'acheteur ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_14_avis_contravention" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_14_avis_contravention" value="Oui"> oui</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.15 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.15 Le vendeur a-t-il, à la connaissance du syndicat, effectué des travaux dans sa partie privative qui affectent les parties communes et pour lesquels une autorisation aurait dû lui être donnée ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_15_travaux_non_autorises" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_15_travaux_non_autorises" value="Oui"> oui</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.16 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.16 Y a-t-il, à la connaissance du syndicat, un facteur se rapportant à l'immeuble susceptible, de façon significative, d'en diminuer la valeur ou d'en augmenter les dépenses ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_16_facteur_valeur" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_16_facteur_valeur" value="Oui"> oui</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.17 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.17 Y a-t-il, à la connaissance du syndicat, des règlements adoptés ou qui pourraient l'être et consignés au registre de la copropriété en outre des dispositions de la déclaration de copropriété ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_17_reglements_additionnels" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_17_reglements_additionnels" value="Oui"> oui</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.18 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.18 L'assemblée des copropriétaires a-t-elle pris, au cours des deux dernières années, des décisions extraordinaires relativement à des travaux de transformation, d'agrandissement ou d'amélioration des parties communes ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_18_decisions_extraordinaires" value="Non" checked> non</label>
+                    <label><input type="radio" name="q3_18_decisions_extraordinaires" value="Oui"> oui</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.19 -->
+        <div class="question-block">
+            <div class="q-title">
+                3.19 La valeur de remplacement de l'immeuble, incluant les parties communes et privatives, à l'exception des améliorations locatives apportées par les copropriétaires, a-t-elle été établie ou attestée par un professionnel compétent ?
+                <div class="radio-options">
+                    <label><input type="radio" name="q3_19_valeur_remplacement" value="Non"> non</label>
+                    <label><input type="radio" name="q3_19_valeur_remplacement" value="Oui" checked> oui</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.20 -->
+        <div class="question-block">
+            <div class="q-title">3.20 Autres :</div>
+            <textarea name="q3_20_autres" placeholder="Précisez tout autre renseignement pertinent..."></textarea>
+        </div>
+
+        <!-- Signatures / Coordonnées répondant -->
+        <div class="question-block" style="background: #f4f7f9;">
+            <div class="q-title">SIGNATURE ET IDENTIFICATION DU RÉPONDANT</div>
+            <div class="grid-2">
+                <div>
+                    <label><strong>Nom complet de la personne autorisée :</strong></label>
+                    <input type="text" name="signataire_nom" placeholder="Ex: Jean Tremblay" required>
+                </div>
+                <div>
+                    <label><strong>Titre / Qualité au sein du syndicat :</strong></label>
+                    <input type="text" name="signataire_titre" placeholder="Ex: Président du syndicat" required>
+                </div>
+            </div>
+            <div class="grid-2" style="margin-top: 15px;">
+                <div>
+                    <label><strong>Signé à :</strong></label>
+                    <input type="text" name="signe_a" placeholder="Ex: Terrebonne" required>
+                </div>
+                <div>
+                    <label><strong>Date :</strong></label>
+                    <input type="date" name="date_signature" required>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Transmettre le rapport DRCOP par courriel ➔</button>
+    </form>
+</main>
+
+<footer>
+    © 2026 Sylvain Campeau – Groupe Sutton - Excellence Inc.
+</footer>
+
+<script>
+    document.getElementById('formDRCOP').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const recipient = "sylvaincampeau@sutton.com";
+        const adresse = formData.get('adresse_propriete') || 'Non spécifiée';
+        const unite = formData.get('unite_numero') || '';
+
+        const subject = `Rapport DRCOP - ${adresse} ${unite}`.trim();
+
+        let body = `DEMANDE DE RENSEIGNEMENTS À LA COPROPRIÉTÉ (DRCOP)\n`;
+        body += `--------------------------------------------------\n\n`;
+        body += `PROPRIÉTÉ : ${adresse} ${unite}\n\n`;
+        body += `3.1 Charges mensuelles : ${formData.get('q3_1_charges_mensuelles')} $\n`;
+        body += `3.2 Dernier paiement : ${formData.get('q3_2_date_paiement')} (Période : ${formData.get('q3_2_periode_couverte')})\n`;
+        body += `3.3 Arrérages : ${formData.get('q3_3_arrerages')} | Montant: ${formData.get('q3_3_arrerages_montant') || '0'} $ | Intérêt: ${formData.get('q3_3_arrerages_interet') || 'N/A'} (${formData.get('q3_3_arrerages_taux') || '0'}%)\n`;
+        body += `3.4 Cotisations à prévoir : ${formData.get('q3_4_cotisations')} | Montant: ${formData.get('q3_4_cotisations_montant') || '0'} $ | Date: ${formData.get('q3_4_cotisations_date') || 'N/A'}\n`;
+        body += `3.5 Fonds de prévoyance : ${formData.get('q3_5_fonds_prevoyance_montant')} $ (en date du ${formData.get('q3_5_fonds_prevoyance_date')})\n`;
+        body += `3.6 Déficit d'opération prévu : ${formData.get('q3_6_deficit')} (${formData.get('q3_6_deficit_explications') || 'N/A'})\n`;
+        body += `3.7 Surplus prévu : ${formData.get('q3_7_surplus')}\n`;
+        body += `3.8 Procédure judiciaire / litige : ${formData.get('q3_8_procedure')} (${formData.get('q3_8_procedure_explications') || 'N/A'})\n`;
+        body += `3.9 Jugement en attente : ${formData.get('q3_9_jugement')}\n`;
+        body += `3.10 Immatriculé (NEQ) : ${formData.get('q3_10_immatricule')} (NEQ: ${formData.get('q3_10_neq') || 'N/A'})\n`;
+        body += `3.11 Assurance syndicat : ${formData.get('q3_11_assurance')}\n`;
+        body += `3.12 Indemnités d'assurance : ${formData.get('q3_12_indemnites')}\n`;
+        body += `3.13 Frais additionnels (partie commune exclusive) : ${formData.get('q3_13_frais_additionnels')}\n`;
+        body += `3.14 Avis de contravention transmis : ${formData.get('q3_14_avis_contravention')}\n`;
+        body += `3.15 Travaux non autorisés : ${formData.get('q3_15_travaux_non_autorises')}\n`;
+        body += `3.16 Facteur diminuant valeur / augmentant dépenses : ${formData.get('q3_16_facteur_valeur')}\n`;
+        body += `3.17 Règlements additionnels : ${formData.get('q3_17_reglements_additionnels')}\n`;
+        body += `3.18 Décisions extraordinaires (2 ans) : ${formData.get('q3_18_decisions_extraordinaires')}\n`;
+        body += `3.19 Valeur de remplacement attestée : ${formData.get('q3_19_valeur_remplacement')}\n`;
+        body += `3.20 Autres : ${formData.get('q3_20_autres') || 'Aucun'}\n\n`;
+        body += `--------------------------------------------------\n`;
+        body += `RÉPONDANT :\n`;
+        body += `Nom : ${formData.get('signataire_nom')}\n`;
+        body += `Titre : ${formData.get('signataire_titre')}\n`;
+        body += `Signé à : ${formData.get('signe_a')}\n`;
+        body += `Date : ${formData.get('date_signature')}\n`;
+
+        window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+</script>
+
+</body>
+</html>
