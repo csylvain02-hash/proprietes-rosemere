@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Emplacement du sitemap pour les moteurs de recherche
+Sitemap: https://www.proprietesrosemere.com/sitemap.xml
