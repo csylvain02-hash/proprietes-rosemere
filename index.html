@@ -834,6 +834,11 @@
             <div class="review-author">- Lesley</div>
         </div>
     </div>
+
+    <div class="slider-controls">
+        <button type="button" id="prevReview" aria-label="Avis précédent">‹ Précédent</button>
+        <button type="button" id="nextReview" aria-label="Avis suivant">Suivant ›</button>
+    </div>
 </section>
 
 <section id="faq">
@@ -860,6 +865,52 @@
 <footer>
     <p>© 2026 Sylvain Campeau — Courtier Immobilier Résidentiel. Tous droits réservés.</p>
 </footer>
+
+<script>
+(function () {
+    var cards = document.querySelectorAll('.reviews-slider .review-card');
+    if (cards.length < 2) return;
+
+    var current = 0;
+    for (var i = 0; i < cards.length; i++) {
+        if (cards[i].classList.contains('active')) { current = i; break; }
+    }
+
+    var delay = 6000;
+    var timer = null;
+
+    function show(index) {
+        cards[current].classList.remove('active');
+        current = (index + cards.length) % cards.length;
+        cards[current].classList.add('active');
+    }
+
+    function next() { show(current + 1); }
+    function prev() { show(current - 1); }
+
+    function restart() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(next, delay);
+    }
+
+    document.getElementById('nextReview').addEventListener('click', function () {
+        next();
+        restart();
+    });
+    document.getElementById('prevReview').addEventListener('click', function () {
+        prev();
+        restart();
+    });
+
+    var slider = document.querySelector('.reviews-slider');
+    slider.addEventListener('mouseenter', function () {
+        if (timer) clearInterval(timer);
+    });
+    slider.addEventListener('mouseleave', restart);
+
+    restart();
+})();
+</script>
 
 </body>
 </html>
