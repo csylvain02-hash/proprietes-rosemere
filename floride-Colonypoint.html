@@ -1,153 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opportunité en Floride – Secteur Colony Point | Sylvain Campeau</title>
-    <meta name="description" content="Découvrez une magnifique opportunité en Floride dans le secteur Colony Point à Tamarac. Service d'accompagnement et de référence pour la clientèle du Québec.">
-    <link rel="canonical" href="https://www.proprietesrosemere.com/floride-Colonypoint.html" />
-    <link rel="icon" type="image/jpg" href="images/profile%202.jpg">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f7f7f7; color: #333; line-height: 1.6; }
-        nav { background: #ffffff; border-bottom: 1px solid #e0e0e0; padding: 15px; text-align: center; }
-        nav a { color: #b40000; text-decoration: none; font-weight: bold; margin: 0 15px; }
-        .container { max-width: 900px; margin: 40px auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.08); }
-        h1, h2 { color: #b40000; margin-top: 0; }
-        
-        .badge-container { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
-        .badge { background: #fff3cd; color: #856404; padding: 8px 15px; border-radius: 5px; font-size: 0.9rem; font-weight: bold; }
-        .badge-price { background: #b40000; color: #ffffff; padding: 8px 15px; border-radius: 5px; font-size: 1rem; font-weight: bold; }
-
-        /* STYLE DU CARROUSEL */
-        .carousel-container { position: relative; max-width: 100%; height: 480px; margin: 20px 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); background: #000; }
-        .carousel-slide { display: none; width: 100%; height: 100%; }
-        .carousel-slide.active { display: block; }
-        .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
-        .carousel-prev, .carousel-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(180, 0, 0, 0.75); color: white; border: none; padding: 12px 18px; font-size: 1.2rem; cursor: pointer; border-radius: 4px; transition: background 0.3s; }
-        .carousel-prev:hover, .carousel-next:hover { background: rgba(142, 0, 0, 0.95); }
-        .carousel-prev { left: 10px; }
-        .carousel-next { right: 10px; }
-        .carousel-dots { text-align: center; margin-top: 10px; }
-        .dot { height: 12px; width: 12px; margin: 0 4px; background-color: #ccc; border-radius: 50%; display: inline-block; cursor: pointer; }
-        .dot.active { background-color: #b40000; }
-
-        .property-details { margin: 30px 0; font-size: 1.05rem; }
-        .property-details ul { padding-left: 20px; }
-        .property-details li { margin-bottom: 8px; }
-        .highlight-box { background: #fdf2f2; border-left: 4px solid #b40000; padding: 20px; margin: 25px 0; border-radius: 4px; }
-        .contact-card { background: #b40000; color: white; padding: 30px; border-radius: 8px; text-align: center; margin-top: 30px; }
-        .contact-card a { color: #ffffff; font-weight: bold; text-decoration: underline; }
-        .contact-card p { margin: 8px 0; font-size: 1.1rem; }
-        footer { text-align: center; padding: 30px; margin-top: 40px; background: #eee; font-size: 0.9rem; }
-
-        @media (max-width: 600px) {
-            .carousel-container { height: 280px; }
-            .container { padding: 20px; }
-        }
-    </style>
+<meta charset="utf-8">
+<title>Correctifs page Floride — description, partage, balisage (2026-11-12)</title>
 </head>
 <body>
+<h1>Correctifs pour floride-Colonypoint.html — prêts le 2026-11-12</h1>
 
-<nav>
-    <a href="https://www.proprietesrosemere.com/">← Retour à l'accueil</a>
-</nav>
+<p><strong>Basé sur la version de la page vue en direct le 2026-11-12.</strong>
+La page a déjà un titre, une adresse canonique et un lien de retour vers
+l'accueil. Il lui manque les balises de partage et le balisage, et sa
+description contient une erreur de ville. Ouvre ce fichier dans ton
+navigateur et copie chaque bloc depuis la page affichée (pas depuis le code
+de ce fichier).</p>
 
-<div class="container">
-    <div class="badge-container">
-        <span class="badge">🌴 Sélection Floride – Opportunité Partenaire</span>
-        <span class="badge-price">Prix demandé : 129 000 $ US</span>
-    </div>
+<h2>Correctif 1 — La ville dans la description</h2>
+<p><strong>Problème :</strong> la description de la page dit « à Tamarac »,
+alors que le condo est à Pembroke Pines (c'est ce que disent le titre de la
+page, la carte sur l'accueil et le fichier llms.txt). Tamarac est une autre
+ville — les moteurs et les IA retiennent la description, il faut corriger.</p>
+<p><strong>Où :</strong> dans <code>floride-Colonypoint.html</code>, remplace
+la ligne de description par celle-ci :</p>
+<pre>
+&lt;meta name="description" content="Découvrez une magnifique opportunité en Floride dans le secteur Colony Point à Pembroke Pines. Service d'accompagnement et de référence pour la clientèle du Québec."&gt;
+</pre>
 
-    <h1>Superbe condo avec vue sur l'eau – Colony Point Circle, Pembroke Pines </h1>
-    <p><em>Profitez de la douceur du climat de la Floride dans un cadre paisible et recherché par la clientèle québécoise.</em></p>
+<h2>Correctif 2 — Balises de partage (Open Graph + Twitter)</h2>
+<p><strong>Où :</strong> dans le <code>&lt;head&gt;</code>, juste après la
+balise canonique (<code>&lt;link rel="canonical" ...&gt;</code>), avant la
+balise <code>&lt;style&gt;</code>.</p>
+<pre>
+&lt;!-- ===== COPIER À PARTIR D'ICI : balises de partage, page Floride ===== --&gt;
+&lt;meta property="og:type" content="website" /&gt;
+&lt;meta property="og:url" content="https://www.proprietesrosemere.com/floride-Colonypoint.html" /&gt;
+&lt;meta property="og:title" content="Opportunité en Floride – Secteur Colony Point | Sylvain Campeau" /&gt;
+&lt;meta property="og:description" content="Découvrez une magnifique opportunité en Floride dans le secteur Colony Point à Pembroke Pines. Service d'accompagnement et de référence pour la clientèle du Québec." /&gt;
+&lt;meta property="og:image" content="https://www.proprietesrosemere.com/images/floride/1.jpeg" /&gt;
+&lt;meta property="og:site_name" content="Sylvain Campeau – Courtier Immobilier Résidentiel Rosemère" /&gt;
+&lt;meta name="twitter:card" content="summary_large_image" /&gt;
+&lt;meta name="twitter:title" content="Opportunité en Floride – Secteur Colony Point | Sylvain Campeau" /&gt;
+&lt;meta name="twitter:description" content="Découvrez une magnifique opportunité en Floride dans le secteur Colony Point à Pembroke Pines. Service d'accompagnement et de référence pour la clientèle du Québec." /&gt;
+&lt;!-- ===== COPIER JUSQU'ICI ===== --&gt;
+</pre>
 
-    <!-- CARROUSEL DE PHOTOS -->
-    <div class="carousel-container">
-        <div class="carousel-slide active"><img src="images/floride/1.jpeg" alt="Vue sur le lac et le plan d'eau à Colony Point"></div>
-        <div class="carousel-slide"><img src="images/floride/2.jpeg" alt="Salon et salle à manger chaleureux à aire ouverte"></div>
-        <div class="carousel-slide"><img src="images/floride/5.jpeg" alt="Vue d'ensemble de la pièce de vie principale"></div>
-        <div class="carousel-slide"><img src="images/floride/7.jpeg" alt="Cuisine fonctionnelle avec comptoirs en granite"></div>
-        <div class="carousel-slide"><img src="images/floride/6.jpeg" alt="Chambre principale spacieuse et lumineuse"></div>
-        <div class="carousel-slide"><img src="images/floride/8.jpeg" alt="Mobilier et rangements de la suite des maîtres"></div>
-        <div class="carousel-slide"><img src="images/floride/9.jpeg" alt="Aperçu de la fenestration de la chambre master"></div>
-        <div class="carousel-slide"><img src="images/floride/11.jpeg" alt="Grande piscine extérieure du complexe"></div>
-        <div class="carousel-slide"><img src="images/floride/15.jpeg" alt="Terrains de jeu de palets (shuffleboard)"></div>
-        <div class="carousel-slide"><img src="images/floride/20.jpeg" alt="Salle de billard de la communauté"></div>
+<h2>Correctif 3 — Balisage de l'offre (JSON-LD)</h2>
+<p><strong>Où :</strong> dans le <code>&lt;head&gt;</code>, juste après le
+bloc de partage ci-dessus, avant la balise <code>&lt;style&gt;</code>. Les
+faits repris sont ceux de la fiche : 129 000 $ US, 1 chambre, 1,5 salle de
+bain, 821 pi², communauté 55+, meublé et clé en main.</p>
+<pre>
+&lt;!-- ===== COPIER À PARTIR D'ICI : balisage offre, page Floride ===== --&gt;
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "name": "Condo avec vue sur l'eau – Colony Point Circle, Pembroke Pines",
+  "url": "https://www.proprietesrosemere.com/floride-Colonypoint.html",
+  "price": "129000",
+  "priceCurrency": "USD",
+  "itemOffered": {
+    "@type": "Apartment",
+    "name": "Superbe condo avec vue sur l'eau – Colony Point Circle, Pembroke Pines",
+    "description": "Condo de 1 chambre et 1,5 salle de bain (821 pi²) avec vue sur l'eau, dans la communauté sécurisée 55+ de Colony Point. Meublé, clé en main, avec piscine, salle de billard et loisirs.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1001 Colony Point Circle #405",
+      "addressLocality": "Pembroke Pines",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "image": "https://www.proprietesrosemere.com/images/floride/1.jpeg"
+  }
+}
+&lt;/script&gt;
+&lt;!-- ===== COPIER JUSQU'ICI ===== --&gt;
+</pre>
 
-        <button class="carousel-prev" onclick="moveSlide(-1)">❮</button>
-        <button class="carousel-next" onclick="moveSlide(1)">❯</button>
-    </div>
-
-    <!-- POINTS INDICATEURS -->
-    <div class="carousel-dots">
-        <span class="dot active" onclick="setSlide(0)"></span>
-        <span class="dot" onclick="setSlide(1)"></span>
-        <span class="dot" onclick="setSlide(2)"></span>
-        <span class="dot" onclick="setSlide(3)"></span>
-        <span class="dot" onclick="setSlide(4)"></span>
-        <span class="dot" onclick="setSlide(5)"></span>
-        <span class="dot" onclick="setSlide(6)"></span>
-        <span class="dot" onclick="setSlide(7)"></span>
-        <span class="dot" onclick="setSlide(8)"></span>
-        <span class="dot" onclick="setSlide(9)"></span>
-    </div>
-
-    <div class="property-details">
-        <h2>Aperçu de la propriété & du cadre de vie</h2>
-        <ul>
-            <li><strong>Prix demandé :</strong> 129 000 $ US</li>
-            <li><strong>Emplacement privilégié :</strong> Communauté de Colony Point, Pembroke Pines (région de Fort Lauderdale), prisée pour sa tranquillité et sa sécurité.</li>
-            <li><strong>Espaces intérieurs :</strong> Disposition à aire ouverte reliant le salon et la salle à manger, cuisine avec passe-plat et grande suite des maîtres.</li>
-            <li><strong>Vue & Environnement :</strong> Emplacement de choix offrant une belle vue sur les terrains de tennis et les magnifiques espaces verts du complexe.</li>
-            <li><strong>Loisirs & Commodités :</strong> Accès à la grande piscine extérieure, aux jeux de palets (shuffleboard), à la salle de billard et au pavillon communautaire.</li>
-        </ul>
-    </div>
-
-    <div class="highlight-box">
-        <h3>Un accompagnement simplifié depuis le Québec</h3>
-        <p>Acheter une résidence secondaire en Floride implique de valider les bonnes informations. En tant que votre courtier au Québec, je réponds à vos questions préliminaires et assure la mise en relation directe avec le courtier certifié sur place pour organiser une visite ou finaliser votre dossier.</p>
-    </div>
-
-    <div class="contact-card">
-        <h2>Obtenir la fiche d'information complète</h2>
-        <p><strong>Prix demandé : 129 000 $ US</strong></p>
-        <p>Pour obtenir plus de détails, valider les frais de copropriété ou planifier une consultation :</p>
-        <p><strong>Sylvain Campeau – Courtier Immobilier Résidentiel</strong></p>
-        <p>📞 Téléphone : <a href="tel:+14388688415">(438) 868-8415</a></p>
-        <p>✉️ Courriel : <a href="mailto:SylvainCampeau@sutton.com">SylvainCampeau@sutton.com</a></p>
-    </div>
-</div>
-
-<footer>
-    © 2026 Sylvain Campeau – Groupe Sutton - Excellence Inc. | Service de référence et d'accompagnement international.
-</footer>
-
-<script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-
-    function showSlide(index) {
-        if (index >= slides.length) slideIndex = 0;
-        if (index < 0) slideIndex = slides.length - 1;
-
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-
-        slides[slideIndex].classList.add('active');
-        dots[slideIndex].classList.add('active');
-    }
-
-    function moveSlide(step) {
-        slideIndex += step;
-        showSlide(slideIndex);
-    }
-
-    function setSlide(index) {
-        slideIndex = index;
-        showSlide(slideIndex);
-    }
-</script>
-
+<h2>Vérification après déploiement</h2>
+<ol>
+  <li>Attends quelques minutes (GitHub Pages), puis ouvre la page et affiche
+  le code source : cherche « Tamarac » — 0 résultat — et « og:title » —
+  présent.</li>
+  <li>Colle l'adresse de la page Floride sur
+  <a href="https://validator.schema.org/">validator.schema.org</a> : 1 élément
+  détecté (Offer), 0 erreur.</li>
+  <li>Partage le lien de la page dans un message privé (Facebook ou autre) :
+  l'aperçu doit montrer le titre, la description et la photo du condo.</li>
+</ol>
 </body>
 </html>
